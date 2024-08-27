@@ -5,7 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leck Eier</title>
     <link rel="icon" type="image/png" href="https://fld.wtf/stupid/image.png" />
-    <link rel="stylesheet" href="https://fld.wtf/stupid/styles.css?v=3">
+    <link id="dynamic-stylesheet" rel="stylesheet" href="styles.css">
+    <script>
+        window.onload = function() {
+            var stylesheet = document.getElementById('dynamic-stylesheet');
+            var currentTime = new Date().getTime();
+            stylesheet.href = 'styles.css?v=' + currentTime;
+        };
+    </script>
 </head>
 <body>
     <div class="container">
