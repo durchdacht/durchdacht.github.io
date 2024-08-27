@@ -1,7 +1,54 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Leck Eier</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    
+    <!-- Reset CSS -->
+    <style>
+        /* Reset.css to ensure consistent styling across browsers */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html, body {
+            height: 100%;
+        }
+    </style>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        body {
+            background-image: url('https://i.imgur.com/bNe8ey4.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center h-screen text-white text-center">
+    <div>
+        <h1 class="text-4xl font-bold mb-4">Leck Eier</h1>
+        <h2 class="text-2xl mb-4">
+            <a href="#" class="text-yellow-300 hover:text-yellow-500">test</a>,
+            <a href="#" class="text-yellow-300 hover:text-yellow-500">test</a>
+        </h2>
+        <div class="mt-6">
+            <button class="bg-yellow-300 text-black px-4 py-2 rounded hover:bg-yellow-500" onclick="playAudio()">Play Sound</button>
+            <audio id="audio" src="your-audio-file.mp3"></audio>
+        </div>
+    </div>
+
+    <script>
+        function playAudio() {
+            var audio = document.getElementById('audio');
+            audio.play();
+        }
+    </script>
 </body>
 </html>
